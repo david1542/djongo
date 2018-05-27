@@ -292,8 +292,8 @@ class SelectQuery(Query):
                     try:
                         ret.append(doc[selected.column])
                     except KeyError:
-                        if self.connection_properties.enforce_schema:
-                            raise MigrationError(selected.column)
+                        # if self.connection_properties.enforce_schema:
+                        #     raise MigrationError(selected.column)
                         ret.append(None)
                 else:
                     try:
